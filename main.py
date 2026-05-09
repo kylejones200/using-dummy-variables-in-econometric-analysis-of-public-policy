@@ -56,7 +56,7 @@ def main():
         x_cols.append('trend')
     
     results = fit_policy_regression(df, config['data']['value_column'], x_cols)
-        logging.info(results.summary())
+    logging.info(results.summary())
     
     plot_policy_effect(df, config['data']['value_column'], config['data']['date_column'],
                       config['policy']['policy_date'], "Policy Effect Analysis",

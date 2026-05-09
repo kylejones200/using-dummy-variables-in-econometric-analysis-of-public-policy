@@ -29,7 +29,7 @@ def fit_policy_regression(df: pd.DataFrame, y_col: str, x_cols: List[str]) -> sm
 
 def plot_policy_effect(df: pd.DataFrame, y_col: str, date_col: str, policy_date: str,
                       title: str, output_path: Path):
- """Plot policy effect """
+    """Plot policy effect """
     fig, ax = plt.subplots(figsize=(10, 6))
     
     df[date_col] = pd.to_datetime(df[date_col])
