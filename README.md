@@ -30,9 +30,9 @@ Edit `config.yaml` to customize:
 ## Dummy Variables
 
 Dummy variables capture:
-- **Policy interventions**: Before/after policy implementation
-- **Structural breaks**: Changes in relationships
-- **Seasonal effects**: Time-based patterns
+- Policy interventions: Before/after policy implementation
+- Structural breaks: Changes in relationships
+- Seasonal effects: Time-based patterns
 
 ## Caveats
 
