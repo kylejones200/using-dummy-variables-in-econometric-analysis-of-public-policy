@@ -1,5 +1,9 @@
 # Dummy Variables in Econometric Policy Analysis
 
+Published: yes
+Medium: [https://medium.com/@kyle-t-jones/using-dummy-variables-in-econometric-analysis-of-public-policy-5faebaa890f0](https://medium.com/@kyle-t-jones/using-dummy-variables-in-econometric-analysis-of-public-policy-5faebaa890f0)
+
+
 This project demonstrates using dummy variables to analyze policy effects in econometric models.
 
 ## Project Structure
