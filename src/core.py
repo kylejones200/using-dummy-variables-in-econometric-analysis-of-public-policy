@@ -42,36 +42,38 @@ def plot_policy_effect(
     output_path: Path,
 ):
     """Plot policy effect"""
-    if plot:
-        fig, ax = plt.subplots(figsize=(10, 6))
+    if not plot:
+        return
 
-        df[date_col] = pd.to_datetime(df[date_col])
-        policy_date = pd.to_datetime(policy_date)
+    fig, ax = plt.subplots(figsize=(10, 6))
 
-        pre_policy = df[df[date_col] < policy_date]
-        post_policy = df[df[date_col] >= policy_date]
+    df[date_col] = pd.to_datetime(df[date_col])
+    policy_date = pd.to_datetime(policy_date)
 
-        ax.plot(
-            pre_policy[date_col],
-            pre_policy[y_col],
-            label="Pre-Policy",
-            color="#4A90A4",
-            linewidth=1.2,
-        )
-        ax.plot(
-            post_policy[date_col],
-            post_policy[y_col],
-            label="Post-Policy",
-            color="#D4A574",
-            linewidth=1.2,
-        )
-        ax.axvline(
-            policy_date, color="red", linestyle="--", linewidth=1.2, label="Policy Date"
-        )
+    pre_policy = df[df[date_col] < policy_date]
+    post_policy = df[df[date_col] >= policy_date]
 
-        ax.set_xlabel("Date")
-        ax.set_ylabel("Value")
-        ax.legend(loc="best")
+    ax.plot(
+        pre_policy[date_col],
+        pre_policy[y_col],
+        label="Pre-Policy",
+        color="#4A90A4",
+        linewidth=1.2,
+    )
+    ax.plot(
+        post_policy[date_col],
+        post_policy[y_col],
+        label="Post-Policy",
+        color="#D4A574",
+        linewidth=1.2,
+    )
+    ax.axvline(
+        policy_date, color="red", linestyle="--", linewidth=1.2, label="Policy Date"
+    )
 
-        plt.savefig(output_path, dpi=100, bbox_inches="tight")
-        plt.close()
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Value")
+    ax.legend(loc="best")
+
+    plt.savefig(output_path, dpi=100, bbox_inches="tight")
+    plt.close()
