@@ -21,7 +21,7 @@ def fit_policy_regression(df: pd.DataFrame, y_col: str, x_cols: List[str]) -> sm
     model = sm.OLS(y, X)
     return model.fit()
 
-def plot_policy_effect(df: pd.DataFrame, y_col: str, date_col: str, policy_date: str, title: str, output_path: Path, plot: bool = False):
+def plot_policy_effect(df: pd.DataFrame, y_col: str, date_col: str, policy_date: str, title: str, output_path: Path, plot: bool=False):
     """Plot policy effect"""
     if not plot:
         return
