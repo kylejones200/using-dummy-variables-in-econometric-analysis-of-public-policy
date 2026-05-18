@@ -6,6 +6,14 @@ Medium: [https://medium.com/@kyle-t-jones/using-dummy-variables-in-econometric-a
 
 This project demonstrates using dummy variables to analyze policy effects in econometric models.
 
+## Business context
+
+Public policy decisions often involve categorical variables, such as geographic regions, political affiliations, industry sectors, or regulatory statuses. These variables influence economic, environmental, and political outcomes, guiding policymakers in designing effective interventions. However, traditional regression models require numerical inputs, making categorical data challenging to incorporate directly. Dummy variables offer a solution.
+
+Dummy variables, or indicator variables, convert categorical data into numerical form, enabling their inclusion in regression models. They capture differences across groups, estimating the impact of categorical factors on outcomes. Policymakers use dummy variables to compare effects across categories, such as regional economic growth or regulatory effectiveness.
+
+Public policies often target specific regions, industries, or constituencies. Policymakers need to measure these differences systematically. Dummy variables allow them to:
+
 ## Project Structure
 
 ```
