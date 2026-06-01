@@ -1,0 +1,9 @@
+[package]
+name = "using_dummy_variables_in_econometric_analysis_of_public_policy_core"
+description = "OLS coefficients via normal equations (small p)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+path = "src/lib.rs"
